@@ -1,6 +1,17 @@
 const express = require('express');
 const router = express.Router();
 
+router.get('/', (req, res) => {
+    res.json({
+        message: "Using GET /",
+        metadata:{
+            host: req.hostname,
+            port: process.env.port,
+            method: req.method,
+        },
+    });
+});
+
 router.get('/:id', (req, res) => {
     const id = req.params.id;
     res.json({
