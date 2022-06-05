@@ -32,4 +32,4 @@ describe("Testing the advancedMath module", () => {
         expect(maxNum(5,10)).toBe(10);
     });
 
-})
+});
